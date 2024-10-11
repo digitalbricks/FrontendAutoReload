@@ -31,9 +31,9 @@ Depending on your templates [output strategy](https://processwire.com/docs/front
 
 There are three options you may configure:
 
-* polling interval in seconds (default: 5) - via `(int) setInterval()`
-* excluded direcories (default: '/images') – via `(array) setExcludedDirectories()`
-* excluded file extensions (default: 'jpeg', 'jpg', 'png', 'svg', 'gif') – via `(array) setExcludedExtensions()` 
+* polling interval in seconds (default: `5`) - via `(int) setInterval()`
+* excluded direcories (default: `'/images'`) – via `(array) setExcludedDirectories()`
+* excluded file extensions (default: `'jpeg', 'jpg', 'png', 'svg', 'gif'`) – via `(array) setExcludedExtensions()` 
 
 Here is an example using all of the mentioned methods:
 
