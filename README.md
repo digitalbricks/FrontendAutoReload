@@ -38,6 +38,7 @@ There are three options you may configure:
 Here is an example using all of the mentioned methods:
 
 ```php
+// get a module instance
 $far = $modules->get('FrontendAutoReload');
 
 // set polling interval to 2 seconds
@@ -48,6 +49,8 @@ $far->setExcludedDirectories(['/assets', '/vendor']); // note the leading slash!
 
 // exclude markdown and bitmap files
 $far->setExcludedExtensions(['md', 'bmp']); // without dot
+
+// output the javascript
 echo $far->renderScript();
 ```
 
