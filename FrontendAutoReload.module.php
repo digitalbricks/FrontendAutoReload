@@ -255,13 +255,13 @@ class FrontendAutoReload extends WireData implements Module {
         $post = file_get_contents('php://input');
         if(!$post) return;
         $data = json_decode($post, true);
-        if(array_key_exists('excludedDirectories', $data)) {
+        if(is_array($data) && array_key_exists('excludedDirectories', $data)) {
             $this->setExcludedDirectories($data['excludedDirectories']);
         }
-        if(array_key_exists('excludedExtensions', $data)) {
+        if(is_array($data) && array_key_exists('excludedExtensions', $data)) {
             $this->setExcludedExtensions($data['excludedExtensions']);
         }
-        if(array_key_exists('interval', $data)) {
+        if(is_array($data) && array_key_exists('interval', $data)) {
             $this->setInterval($data['interval']);
         }
     }
