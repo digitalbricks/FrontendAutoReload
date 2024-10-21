@@ -34,6 +34,8 @@
                 })
                 .catch(error => {
                     console.error('Error fetching data:', error);
+                    clearInterval(intervalId);
+                    console.info('FrontendAutoReload: Polling stopped due to invalid response. Try reloading the page and make sure that PW debug mode is on (true) and you are logged in as superuser.');
                 });
         };
 
