@@ -1,16 +1,7 @@
 <?php namespace ProcessWire;
 /**
- *                  _          _                  _ _ _                  _
- *                 | |        | |                | | (_)                | |
- *   __ _ _ __   __| |_ __ ___| |__   ___ _ __ __| | |_ _ __   __ _   __| | ___
- *  / _` | '_ \ / _` | '__/ _ \ '_ \ / _ \ '__/ _` | | | '_ \ / _` | / _` |/ _ \
- * | (_| | | | | (_| | | |  __/ | | |  __/ | | (_| | | | | | | (_| || (_| |  __/
- *  \__,_|_| |_|\__,_|_|  \___|_| |_|\___|_|  \__,_|_|_|_| |_|\__, (_)__,_|\___|
- *                                                             __/ |
- *                                                            |___/
- *
- *
  * Visionen & Kreationen – FrontendAutoReload
+ * https://github.com/digitalbricks/FrontendAutoReload
  *
  * This module is a simple helper for automatically reloading the browser window when a file in the
  * /site/templates/ directory is changed. This is useful for development purposes.
