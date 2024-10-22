@@ -18,12 +18,13 @@ class FrontendAutoReload extends WireData implements Module {
 
         return array(
             'title' => 'FrontendAutoReload',
-            'version' => 002,
+            'version' => 003,
             'summary' => 'A module for automatically reloading the browser window when a file in the /site/templates/ directory is changed.',
             'author' => 'André Herdling – Visionen & Kreationen',
             'icon' => 'refresh',
             'autoload' => 'template!=admin', // load only in the frontend (https://processwire.com/talk/topic/3768-processwire-dev-branch/)
             'singular' => true,
+            'requires'  => 'ProcessWire>=3.0.173, PHP>=8.2.0'
         );
     }
 
