@@ -18,7 +18,7 @@ class FrontendAutoReload extends WireData implements Module {
 
         return array(
             'title' => 'FrontendAutoReload',
-            'version' => 003,
+            'version' => 004,
             'summary' => 'A module for automatically reloading the browser window when a file in the /site/templates/ directory is changed.',
             'author' => 'André Herdling – Visionen & Kreationen',
             'icon' => 'refresh',
@@ -243,7 +243,6 @@ class FrontendAutoReload extends WireData implements Module {
      * @throws WireException
      */
     private function getConfigFromPost() {
-        if(!$this->wire('input')->post) return;
         $post = file_get_contents('php://input');
         if(!$post) return;
         $data = json_decode($post, true);
