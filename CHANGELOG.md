@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.0.4 (29.11.2024)
+- removed a check for $input->post wich may lead to configuration not reflected correctly
+
 ## 0.0.3 (22.10.2024)
 - added `requires` in module info, specifying PW>=3.0.173 and PHP>=8.2.0
 
