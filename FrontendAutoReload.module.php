@@ -41,6 +41,9 @@ class FrontendAutoReload extends WireData implements Module {
     }
 
     public function init() {
+         // get config from POST
+         $this->getConfigFromPost();
+        
         if(!$this->isAllowed()) return ''; // Only add the hook if the user is allowed
         // add URL endpoint for JS polling
         // URL hooks where introduced in ProcessWire 3.0.173
@@ -50,9 +53,6 @@ class FrontendAutoReload extends WireData implements Module {
             $timestamp = $this->getLatestModificationTime();
             return json_encode($timestamp);
         });
-
-        // get config from POST
-        $this->getConfigFromPost();
     }
 
 
