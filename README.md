@@ -59,7 +59,7 @@ It's important that the configuration is assigned **before** calling `renderScri
 In the default configuration, images (and the folder that can potentially contain images) are intentionally excluded. This is because the module is intended mainly to react to code changes – but you may change this behavior by using the above-mentioned methods.
 
 ## Superuser only
-Please be aware that the module is designed to be only active for logged in superusers (be default the initial user who installed ProcessWire, creating the admin user account) and only if `$config->debug = true` is set in the ProcessWire config file (`/site/config.php`). In any other case the URL endpoint won't be registered and the script won't be rendered.
+Please be aware that the module is designed to be only active for logged in superusers (by default the initial user who installed ProcessWire, creating the admin user account) and only if `$config->debug = true` is set in the ProcessWire config file (`/site/config.php`). In any other case the URL endpoint won't be registered and the script won't be rendered.
 
 
 ## Technical Background
