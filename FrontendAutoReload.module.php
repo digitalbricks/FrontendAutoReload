@@ -18,7 +18,7 @@ class FrontendAutoReload extends WireData implements Module {
 
         return array(
             'title' => 'FrontendAutoReload',
-            'version' => 004,
+            'version' => 005,
             'summary' => 'A module for automatically reloading the browser window when a file in the /site/templates/ directory is changed.',
             'author' => 'André Herdling – Visionen & Kreationen',
             'icon' => 'refresh',
@@ -37,6 +37,7 @@ class FrontendAutoReload extends WireData implements Module {
     public function __construct()
     {
         parent::__construct();
+        require_once(__DIR__ . '/ExcludeFilter.php');
         $this->watchedDir = $this->wire('config')->paths->templates;
     }
 
@@ -149,7 +150,10 @@ class FrontendAutoReload extends WireData implements Module {
 
         // Create a new FilesystemIterator
         // @source: https://www.php.net/manual/en/class.recursivedirectoryiterator.php#85805
-        $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($directory), \RecursiveIteratorIterator::SELF_FIRST);
+        $iterator = new \RecursiveIteratorIterator(
+            new ExcludeFilter(new \RecursiveDirectoryIterator($directory), $this->watchedDir, $this->excludedDirectories),
+            \RecursiveIteratorIterator::SELF_FIRST
+        );
 
 
         // Iterate through each file in the directory and subdirectories

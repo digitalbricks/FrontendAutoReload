@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.0.5 (16.12.2024)
+- fixed bug where excluded folders were not being excluded in the directory iterator; by using a custom RecursiveFilterIterator
+
 ## 0.0.4 (29.11.2024)
 - removed a check for $input->post wich may lead to configuration not reflected correctly
 - called getConfigFromPost() earlier in init() method, before return
